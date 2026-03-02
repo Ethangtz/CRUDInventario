@@ -14,8 +14,8 @@ public class InventarioGeneral {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        fmrArticulo FArticulo = new fmrArticulo();
-        FArticulo.setVisible(true);
+        frmMain FMain = new frmMain();
+        FMain.setVisible(true);
         
     }
     
