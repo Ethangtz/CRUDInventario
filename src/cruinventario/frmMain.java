@@ -19,7 +19,8 @@ public class frmMain extends javax.swing.JFrame {
         initComponents();
     }
 
-    fmrArticulo fArticulo = new fmrArticulo();
+    frmArticulo fArticulo = new frmArticulo();
+    frmClientes fCliente = new frmClientes();
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -27,7 +28,7 @@ public class frmMain extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        btnCliente = new javax.swing.JButton();
         btnInventario = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -35,9 +36,11 @@ public class frmMain extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel1.setText("Selecciona una opcion");
 
-        jButton1.setText("Clientes");
+        btnCliente.setText("Clientes");
+        btnCliente.addActionListener(this::btnClienteActionPerformed);
 
-        btnInventario.setText("Inventarios");
+        btnInventario.setText("Inventario");
+        btnInventario.addActionListener(this::btnInventarioActionPerformed);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -49,7 +52,7 @@ public class frmMain extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(btnInventario)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton1))
+                        .addComponent(btnCliente))
                     .addComponent(jLabel1))
                 .addGap(70, 70, 70))
         );
@@ -60,7 +63,7 @@ public class frmMain extends javax.swing.JFrame {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
+                    .addComponent(btnCliente)
                     .addComponent(btnInventario))
                 .addContainerGap(137, Short.MAX_VALUE))
         );
@@ -84,9 +87,15 @@ public class frmMain extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    private void btnInventarioActionPerformed(java.awt.event.ActionEvent evt) {
+
+    private void btnClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClienteActionPerformed
+        fCliente.setVisible(true);
+    }//GEN-LAST:event_btnClienteActionPerformed
+
+    private void btnInventarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInventarioActionPerformed
         fArticulo.setVisible(true);
-    }
+    }//GEN-LAST:event_btnInventarioActionPerformed
+    
     
     public static void main(String args[]) {
         
@@ -95,8 +104,8 @@ public class frmMain extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnCliente;
     private javax.swing.JButton btnInventario;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
